@@ -52,7 +52,7 @@ function reply(reply_token, path, msg, question) {
             messages: [
                 {
                     type: "flex",
-                    altText: "Connect Wipcamp",
+                    altText: "Connect hi",
                     contents: {
                         type: "bubble",
                         body: {
