@@ -10,6 +10,9 @@ const axios = require('axios')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.post('/test',(res,req)=> {
+    console.log('dsfd')
+})
     app.post('/webhook', async (req, res) => {
         let reply_token = req.body.events[0].replyToken
         let msg = req.body.events[0].message.text
