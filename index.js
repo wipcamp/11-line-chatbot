@@ -15,20 +15,20 @@ app.use(bodyParser.json())
         let msg = req.body.events[0].message.text
         console.log(res)
         console.log(msg)
-        const questions = ''
-        if (msg === 'ตอบคำถาม') {
-            try {
-                questions = await axios('http://127.0.0.1:8001/api/questions')
-            }catch(e){
-                console.log('Errrrrr Q  ',e)
-            }
-        }
-        console.log('question: '+questions)
-        await axios.get('http://127.0.0.1:8001/api/questions')
-        .then(function(response){
-            console.log('data : '+response.data); // ex.: { user: 'Your User'}
-            console.log('status : '+response.status); // ex.: 200
-        });  
+        // const questions = ''
+        // if (msg === 'ตอบคำถาม') {
+        //     try {
+        //         questions = await axios('http://127.0.0.1:8001/api/questions')
+        //     }catch(e){
+        //         console.log('Errrrrr Q  ',e)
+        //     }
+        // }
+        // console.log('question: '+questions)
+        // await axios.get('http://127.0.0.1:8001/api/questions')
+        // .then(function(response){
+        //     console.log('data : '+response.data); // ex.: { user: 'Your User'}
+        //     console.log('status : '+response.status); // ex.: 200
+        // });  
     reply(reply_token, req.body.events[0].source.userId, msg)
     console.log(reply_token)
     console.log(req.body.events)
