@@ -16,8 +16,7 @@ app.post('/test',(res,req)=> {
     app.post('/webhook', async (req, res) => {
         let reply_token = req.body.events[0].replyToken
         let msg = req.body.events[0].message.text
-        console.log(res)
-        console.log(msg)
+        console.log( req.body.events[0].source.userId)
         // const questions = ''
         // if (msg === 'ตอบคำถาม') {
         //     try {
@@ -33,10 +32,7 @@ app.post('/test',(res,req)=> {
         //     console.log('status : '+response.status); // ex.: 200
         // });  
     reply(reply_token, req.body.events[0].source.userId, msg)
-    console.log(reply_token)
-    console.log(req.body.events)
-    console.log(req.body.events[0].source)
-    console.log(req.body)
+   
     res.sendStatus(200)
 })
 app.get('/', (req, res) => res.sendStatus(200))
