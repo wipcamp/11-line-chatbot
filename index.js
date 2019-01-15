@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.post('/test',(res,req)=> {
-    console.log('dsfd')
+    console.log('dsfd',req)
 })
     app.post('/webhook', async (req, res) => {
         let reply_token = req.body.events[0].replyToken
