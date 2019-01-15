@@ -69,7 +69,7 @@ function reply(reply_token, path, msg, question) {
                                     action: {
                                         type: "uri",
                                         label: "Connect Wipcamp",
-                                        uri: `https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1632037404&redirect_uri=https://localhost:3000&state=asdasd&scope=openid%20profile`
+                                        uri: `https://access.line.me/oauth2/v2.1/authorize?response_type=code&client_id=1638650000&redirect_uri=https://localhost:3000&state=asdasd&scope=openid%20profile`
                                     }
                                 }
                             ]
